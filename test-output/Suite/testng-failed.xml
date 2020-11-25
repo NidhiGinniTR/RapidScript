@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="pkg_FunctionLibrary.Listener"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)">
+    <classes>
+      <class name="pkg_OWM.Workflow_Browser.Dynamic_Parallel_Workflow.Dynamic_Parallel_ActionsTest">
+        <methods>
+          <include name="beforesuit"/>
+          <include name="DynamicParallelTemplate"/>
+          <include name="closeBrowser"/>
+          <include name="aftersuite"/>
+        </methods>
+      </class> <!-- pkg_OWM.Workflow_Browser.Dynamic_Parallel_Workflow.Dynamic_Parallel_ActionsTest -->
+      <class name="pkg_OWM.Workflow_Browser.Dynamic_Serial_Workflow.Dynamic_Serial_ActionsTest">
+        <methods>
+          <include name="aftersuite"/>
+          <include name="closeBrowser"/>
+          <include name="beforesuit"/>
+          <include name="DynamicSerialTemplate"/>
+        </methods>
+      </class> <!-- pkg_OWM.Workflow_Browser.Dynamic_Serial_Workflow.Dynamic_Serial_ActionsTest -->
+      <class name="pkg_OWM.Workflow_Browser.Serial_Workflow.Serial_ActionsTest">
+        <methods>
+          <include name="aftersuite"/>
+          <include name="SerialTemplate"/>
+          <include name="closeBrowser"/>
+          <include name="beforesuit"/>
+        </methods>
+      </class> <!-- pkg_OWM.Workflow_Browser.Serial_Workflow.Serial_ActionsTest -->
+      <class name="pkg_OWM.Workflow_Browser.Parallel_Workflow.Parallel_ActionsTest">
+        <methods>
+          <include name="ParallelTemplate"/>
+          <include name="beforesuit"/>
+          <include name="aftersuite"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- pkg_OWM.Workflow_Browser.Parallel_Workflow.Parallel_ActionsTest -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
